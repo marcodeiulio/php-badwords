@@ -1,7 +1,7 @@
 <?php 
 
-$my_badword = $_GET['badword'];
-$my_replacement = $_GET['replacement'];
+$my_badword = $_GET ? $_GET['badword'] : '';
+$my_replacement = $_GET ? $_GET['replacement'] : '';
 
 $par = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero blanditiis obcaecati iusto provident laborum culpa ducimus et recusandae. Nesciunt aut numquam labore inventore quaerat ipsam!';
 
