@@ -6,6 +6,7 @@ $my_replacement = $_GET['replacement'];
 $par = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero blanditiis obcaecati iusto provident laborum culpa ducimus et recusandae. Nesciunt aut numquam labore inventore quaerat ipsam!';
 
 $censored_par = str_replace($my_badword, $my_replacement, $par);
+$censored_par_length = strlen($censored_par);
 
 ?>
 
@@ -33,7 +34,7 @@ $censored_par = str_replace($my_badword, $my_replacement, $par);
 		<button role="submit">Invia</button>
 	</form>
 <h2>Hai scelto di revisionare la parola "<?php echo $my_badword ?>"</h2>
-<h2>Il paragrafo revisionato è il seguente</h2>
+<h2>Il paragrafo revisionato è il seguente, e la sua lunghezza è <?php echo $censored_par_length ?> caratteri</h2>
 <p><?php echo $censored_par ?></p>
 </body>
 </html>
